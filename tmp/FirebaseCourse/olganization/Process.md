@@ -24,3 +24,58 @@ Enable services on the backend
 npm install firebase
 ```
 >4
+firebaseConfig location (2)
+__________________________
+in Firebase **8**
+```
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
+
+const firebaseConfig = {...}
+
+// init firebase
+firebase.initializeApp(firebaseConfig);
+
+// init service
+const projectFirestore = firebase.firestore();
+const projectAuth = firebase.auth();
+
+// timestamp
+const timestamp = firebase.firestore.Timestamp
+
+export { projectFirestore, projectAuth, timestamp };
+```
+____________________________
+in Firebase **9**
+```
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import { getAuth } from "firebase/auth";
+
+const firebaseConfig = {...}
+
+// init firebase
+firebase.initializeApp(firebaseConfig);
+
+// init service
+const projectFirestore = firebase.firestore();
+const projectAuth = getAuth();
+
+// timestamp
+const timestamp = firebase.firestore.Timestamp
+
+export { projectFirestore, projectAuth, timestamp };
+```
+
+>5
+Initialise firebase frontend
+```
+npm install firebase-tools
+```
+firebase login -> follow propmts to authenticate
+
+```
+firebase init
+```
