@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.868" height="23.868" viewBox="0 0 6.315 6.315">
+  <defs>
+    <linearGradient id="a">
+      <stop offset="0" stop-color="#2c79ca"/>
+      <stop offset="1" stop-color="#c4462d"/>
+    </linearGradient>
+    <linearGradient xlink:href="#a" id="b" x1=".077" x2="6.315" y1="3.185" y2="3.185" gradientTransform="translate(.038)" gradientUnits="userSpaceOnUse"/>
+  </defs>
+  <path fill="none" d="M-.01 7.1h6.35v6.35H-.01z"/>
+  <path d="M5.547 9.487a.525.525 0 0 1-.524.524h-.27v-.567c.455-.116.794-.526.794-1.016v-.005l-.53.005a.525.525 0 0 1-.524.524h-.137l-1.19-1.587-1.192 1.587h-.137a.525.525 0 0 1-.524-.524h-.53c0 .492.34.9.795 1.016v.567h-.27a.525.525 0 0 1-.524-.524h-.53c0 .492.34.9.794 1.016v2.418h1.853v-1.058c0-.146.119-.265.264-.265s.265.12.265.265v1.058h1.852v-2.418c.455-.117.794-.527.794-1.016V9.48zM3.165 8.246l.53.706h-1.06zM2.107 9.48h2.117v.53H2.107zm2.646 2.911h-.794v-.53c0-.436-.357-.793-.794-.793s-.794.357-.794.794v.529h-.793V10.54h3.175z"/>
+  <path fill="none" d="M7.95 8.3h6.35v6.35H7.95z"/>
+  <path d="M12.977 11.74H11.39v1.587h-.53V11.74H9.274v-.53h1.588V9.624h.529v1.588h1.587z"/>
+  <path fill="none" d="M23.93 7h6.35v6.35h-6.35z"/>
+  <path d="M28.957 7.794h-3.704a.53.53 0 0 0-.53.529v3.704c0 .291.239.53.53.53h3.704a.53.53 0 0 0 .53-.53V8.323a.53.53 0 0 0-.53-.53zm-3.704 4.233V8.323h1.588v3.704zm3.704 0H27.37v-1.852h1.587zm0-2.381H27.37V8.323h1.587z"/>
+  <path fill="none" d="M15.61 6.7h6.35v6.35h-6.35z"/>
+  <path d="M16.933 9.346h3.704v.53h.53V8.287a.53.53 0 0 0-.53-.53h-.264V7.23h-.53v.53h-2.116v-.53h-.53v.53h-.264a.527.527 0 0 0-.527.529l-.002 3.704c0 .291.235.53.529.53h1.852v-.53h-1.852zm0-1.058h3.704v.529h-3.704zm4.72 2.72-.187.188-.561-.561.188-.188a.264.264 0 0 1 .373 0l.187.188a.264.264 0 0 1 0 .373zm-.936-.186.56.561-1.402 1.403h-.56v-.561z"/>
+  <g stroke-width=".265" font-family="sans-serif" font-size="1.411" font-style="italic">
+    <text xml:space="preserve" x="64.706" y="138.877" style="line-height:1.25" transform="translate(-64.97 -140.4)"><tspan x="64.706" y="138.877">logo</tspan></text>
+    <text xml:space="preserve" x="72.643" y="138.92" style="line-height:1.25" transform="translate(-64.97 -140.4)"><tspan x="72.643" y="138.92">add</tspan></text>
+    <text xml:space="preserve" x="80.581" y="138.92" style="line-height:1.25" transform="translate(-64.97 -140.4)"><tspan x="80.581" y="138.92">calendar</tspan></text>
+    <text xml:space="preserve" x="88.518" y="138.92" style="line-height:1.25" transform="translate(-64.97 -140.4)"><tspan x="88.518" y="138.92">dashboard</tspan></text>
+  </g>
+  <g fill="none">
+    <path stroke="#000" stroke-linecap="round" stroke-width=".3" d="M.007-9.24h6.315v6.315H.007z" style="paint-order:fill markers stroke"/>
+    <g stroke="#000">
+      <path stroke-linecap="round" stroke-width=".5" d="M66.41 144.1c-.101-.534-.031-.85-.008-.964.211-.825.982-1.398 1.73-1.41a1.765 1.765 0 1 1 0 3.53" style="paint-order:fill markers stroke" transform="translate(-64.97 -149.6)"/>
+      <path stroke-width=".5" d="M1.21-5.5s-.604.702-.282 1.166c.322.464 1.89.772 2.11.79.626.05-.09-.846-.405-1.256-.315-.41-1.422-.7-1.422-.7z"/>
+      <path stroke-linecap="square" stroke-width=".4" d="M3.66-6.4c.086.025.992.37.7-.011-.291-.381-.583-.305-.809-.194-.225.11-.44.054-.67-.068-.232-.122-.857.1-.917.261-.06.162.625.138.876.027.251-.111.734-.04.82-.015z"/>
+      <path stroke-width=".8" d="M1.88-3.8s-.252-.78.41-1.186"/>
+      <path stroke-linecap="round" stroke-width=".43" d="m3.05-5.6.201.166.192-.141"/>
+      <g stroke-width=".5">
+        <path d="M1.55-6.8s-.237-.837-.133-1.005.822.12.822.12M4.79-6.8s.182-.753.079-.92-.826.08-.826.08"/>
+        <path d="M2-7.4s.643-.568 1.308-.045c.52-.413 1.135.129 1.135.129"/>
+      </g>
+    </g>
+    <path d="M7.937.04h6.315v6.315H7.937z" style="paint-order:fill markers stroke"/>
+    <path stroke="#000" stroke-linecap="round" stroke-width=".5" d="m11.09 1.6.006 3.181M12.68 3.2l-3.181.006"/>
+    <g stroke="#000" stroke-width=".5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M82.02 141.6h3.969v3.969H82.02zm.7-.4h.193v.164h-.193zm2.38 0h.193v.164H85.1z" style="paint-order:fill markers stroke" transform="translate(-65.22 -150.4)"/>
+      <path d="M16.8-7.5h3.969m-1.309 0v2.646M18.11-7.5v2.646M16.8-6.2h3.969"/>
+    </g>
+    <path d="M15.88.04h6.315v6.315H15.88z" style="paint-order:fill markers stroke"/>
+    <path stroke="#000" stroke-linejoin="round" stroke-width=".5" d="M21.02 3.2v1.984h-3.969V1.215h3.969v.992" style="paint-order:fill markers stroke"/>
+    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" d="M82.64 141.3h.193v.164h-.193zm2.38 0h.193v.164h-.193z" style="paint-order:fill markers stroke" transform="translate(-64.89 -140.4)"/>
+  </g>
+  <a transform="translate(-65.12 -140.5)">
+    <path fill="none" stroke="#000" stroke-linecap="square" stroke-linejoin="round" stroke-width=".462" d="M83.81 144.7a2.44 2.44 0 0 0 .595-.54v-.476l1.007-.95 1.287-.06-.531 1.01-1.008.713-.772-.233"/>
+  </a>
+  <g fill="none">
+    <path stroke="#000" stroke-width=".5" d="M17.85 2.2h1.852M17.85 3h1.058m-1.058.8h.53m8.2-2.5v3.848M29.06 2.5l-2.379-.002"/>
+    <path d="M88.79 140.4h6.315v6.315H88.79z" style="paint-order:fill markers stroke" transform="translate(-64.97 -140.4)"/>
+    <g stroke="#000" stroke-width=".5">
+      <path stroke-linejoin="round" d="M93.93 145.6h-3.969v-3.969h3.969z" style="paint-order:fill markers stroke" transform="translate(-64.97 -140.4)"/>
+      <path d="m28.96 3.8-2.379-.002"/>
+    </g>
+  </g>
+  <g fill="none">
+    <path d="M0 0h6.315v6.315H0z" style="paint-order:fill markers stroke"/>
+    <g stroke="url(#b)" stroke-linecap="round" stroke-width=".5" transform="translate(-.038)">
+      <path d="M.327 5.037 3.687.736"/>
+      <path stroke-linejoin="round" d="M1.04 4.175v1.454l4.351.003V4.29"/>
+      <path d="M2.276 5.501v-.64L3.5 3.146m2.565 1.891L2.705.736"/>
+      <path d="M4.115 5.501v-.64L2.891 3.146"/>
+    </g>
+  </g>
+</svg>
