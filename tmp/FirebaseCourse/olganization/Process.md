@@ -104,3 +104,32 @@ project(project details)
 npm i react-router-dom
 ```
 Set up routes in App
+
+## Router 5
+```
+<BrowserRouter>
+  <Switch>
+    <Route exact path="/">
+      <Dashboard />
+    </Route>
+    <Route path="/login">
+      <Login />
+    </Route>
+  </Switch>
+</BrowserRouter>
+```
+## Router 6
+```
+<BrowserRouter>
+  <Routes>
+    <Route exact path="/" element={<Dashboard/>} />
+    <Route path="/login" element={<Login />} >
+  </Routes>
+</BrowserRouter>
+```
+
+>10
+Create the nav bad and use Link from router-dom to connect the available pages
+
+>11
+Create side bar using A <NavLink> is a special kind of <Link> that knows whether or not it is "active" or "pending". This is useful when building a navigation menu, such as a breadcrumb or a set of tabs where you'd like to show which of them is currently selected. It also provides useful context for assistive technology like screen readers.

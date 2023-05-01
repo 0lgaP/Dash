@@ -14,12 +14,16 @@ import NotFound from "./pages/notFound/NotFound";
 import Register from "./pages/register/Register";
 import Create from "./pages/create/Create";
 import Project from "./pages/project/Project";
+import Navbar from "./components/navbar/Navbar";
+import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Sidebar />
       <div className="container">
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
@@ -30,10 +34,7 @@ function App() {
         </Routes>
         </div>
       </BrowserRouter>
-      <img src={home}></img>
-      <img src={add}></img>
-      <img src={activity}></img>
-      <img src={dash}></img>
+
     </div>
   );
 }

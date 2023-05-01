@@ -1,0 +1,28 @@
+
+label {
+  display: block;
+  color: var(--font-l);
+}
+
+label > p {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--font-d);
+}
+
+input {
+  font-size: 1em;
+  color: var(--font-primary);
+  width: 100%;
+  box-sizing: border-box;
+  border: var(--border-primary-l);
+}
+
+input:focus {
+  outline: var(--hover-border);
+  border: 2px solid transparent;
+}
+
+label:focus-within p {
+  color: var(--font-secondary);
+}
