@@ -79,3 +79,12 @@ firebase login -> follow propmts to authenticate
 ```
 firebase init
 ```
+
+>6 
+Import the hooks created from last project as well as the context provider
+
+>7 
+wrap <App/> in main.jsx with the AuthContextProvider
+the context is providing state: {user, authIsReady} as well as the dispatch function
+
+>8
