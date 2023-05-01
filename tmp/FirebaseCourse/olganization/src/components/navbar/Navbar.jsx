@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="navbar">
       <ul>
         <li className="logo">
-          <Link exact to="/">
+          <Link exact="true" to="/">
             <img src={Temple} alt="Dash logo"/>
             <span>Dash</span>
           </Link>

@@ -133,3 +133,6 @@ Create the nav bad and use Link from router-dom to connect the available pages
 
 >11
 Create side bar using A <NavLink> is a special kind of <Link> that knows whether or not it is "active" or "pending". This is useful when building a navigation menu, such as a breadcrumb or a set of tabs where you'd like to show which of them is currently selected. It also provides useful context for assistive technology like screen readers.
+
+>12
+Set up input fields and create registration form

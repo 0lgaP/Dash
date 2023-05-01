@@ -2,7 +2,7 @@ import { useState, useEffect, forwardRef } from "react";
 import PropTypes from "prop-types";
 
 // styles
-import styles from "./PasswordInput.module.css";
+import "./PasswordInput.css";
 
 // icons
 import Visible from "../../assets/visibility_on.svg";
@@ -17,6 +17,7 @@ const PasswordInput = forwardRef((props, ref) => {
 
   const onToggle = async () => {
     setShowPassword((prev) => !prev);
+    console.log({showPassword, password})
   };
 
   useEffect(() => {
@@ -42,7 +43,7 @@ const PasswordInput = forwardRef((props, ref) => {
         <img
           src={showPassword ? Visible : InVisible}
           alt="show password"
-          className={showPassword ? styles["show-icon"] : styles["hide-icon"]}
+          className={showPassword ? "show-icon" : "hide-icon"}
         />
       </button>
       <label>
@@ -54,7 +55,7 @@ const PasswordInput = forwardRef((props, ref) => {
           ref={ref}
           value={password}
           onChange={onChange}
-          className={styles.pass}
+          className="pass"
         />
       </label>
     </div>
