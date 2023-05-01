@@ -136,3 +136,5 @@ Create side bar using A <NavLink> is a special kind of <Link> that knows whether
 
 >12
 Set up input fields and create registration form
+
+> firebase storage allows uploading files

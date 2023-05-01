@@ -1,10 +1,15 @@
 import { useState, useRef } from "react";
+// hooks
+import { useSignup } from "../../hooks/useSignup";
 // styles
 import "./Register.css";
 // components
+
 import Input from "../../components/input/Input";
 import PasswordInput from "../../components/input/PasswordInput";
 import FileSelector from "../../components/input/FileSelector";
+
+import FormCard from "../../components/Cards/FormCard";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -12,13 +17,18 @@ const Register = () => {
   const [displayName, setDisplayName] = useState("");
   const [thumbnail, setThumbnail] = useState(null);
   const [thumbnailError, setThumbnailError] = useState(null);
+  
+  const { isPending, error, register } = useSignup();
 
-
+  const passRef = useRef(null);
+// form submit
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(email, password, displayName, thumbnail)
+    console.log("handlingSubmit", isPending)
+    register(email, password, displayName, thumbnail)
   }
 
+  console.log("in form", isPending)
   // images
   const handleFileChange = (e) => {
     setThumbnail(null);
@@ -43,33 +53,37 @@ const Register = () => {
     console.log("Thumbnail upadated")
   };
 
-  // input: onChange, value, type, inputLabel
-  const passRef = useRef(null);
   return (
-    <form className="auth-form" onSubmit={handleSubmit}>
+    <FormCard 
+    onSubmit={handleSubmit}
+      title="Register"
+      buttonLabel={isPending? "Loading" : "Register"}
+      error={error}
+      isPending={isPending}
+    >
+
       <Input
         onChange={(e) => setEmail(e.target.value)}
         value={email}
         type="email"
         inputLabel="Email"
-      />
+        />
       <PasswordInput
         onChange={(e) => setPassword(e.target.value)}
         password={password}
         ref={passRef}
-      />
+        />
       <Input
         onChange={(e) => setDisplayName(e.target.value)}
         value={displayName}
         type="text"
         inputLabel="Display Name"
-      />
+        />
       <FileSelector onChange={handleFileChange} error={thumbnailError}/> 
 
-      <button type="submit" className="btn">
-        Register
-      </button>
-    </form>
+      {error && <div className="error">{error}</div>}
+
+        </FormCard>
   );
 };
 
