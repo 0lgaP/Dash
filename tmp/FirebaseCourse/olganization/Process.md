@@ -88,3 +88,19 @@ wrap <App/> in main.jsx with the AuthContextProvider
 the context is providing state: {user, authIsReady} as well as the dispatch function
 
 >8
+set up all needed pages in their own pages folder
+/* pages
+
+dashboard (homepage)
+login
+register
+create
+project(project details)
+
+*/
+
+>9 
+```
+npm i react-router-dom
+```
+Set up routes in App
