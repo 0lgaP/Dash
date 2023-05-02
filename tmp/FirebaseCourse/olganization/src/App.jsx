@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 // styles
 import "./App.css";
 // hooks
@@ -20,15 +20,15 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          <Sidebar />
+          {user && <Sidebar />}
           <div className="container">
             <Navbar />
             <Routes>
-              <Route exact path="/" element={<Dashboard />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/create" element={<Create />} />
-              <Route path="/project/:id" element={<Project />} />
+              <Route exact path="/" element={user ? <Dashboard /> : <Navigate to="/login"/>} />
+              <Route path="/create" element={user ? <Create /> : <Navigate to="/login"/>} />
+              <Route path="/project/:id" element={user ? <Project /> :<Navigate to="/login"/>} />
+              <Route path="/login" element={!user ? <Login /> : <Navigate to="/"/>} />
+              <Route path="/register" element={!user ? <Register /> : <Navigate to="/"/>} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
