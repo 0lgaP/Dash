@@ -1,11 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // styles
 import "./App.css";
-// icons
-import activity from "./assets/activity_icon.svg";
-import home from "./assets/temple.svg";
-import dash from "./assets/dashboard_icon.svg";
-import add from "./assets/add_icon.svg";
+// hooks
+import { useAuthContext } from "./hooks/useAuthContext";
 
 // pages
 import Dashboard from "./pages/dashboard/Dashboard";
@@ -18,23 +15,25 @@ import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
+  const { user, authIsReady } = useAuthContext();
   return (
     <div className="App">
-      <BrowserRouter>
-        <Sidebar />
-      <div className="container">
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Dashboard />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/project/:id" element={<Project />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        </div>
-      </BrowserRouter>
-
+      {authIsReady && (
+        <BrowserRouter>
+          <Sidebar />
+          <div className="container">
+            <Navbar />
+            <Routes>
+              <Route exact path="/" element={<Dashboard />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/create" element={<Create />} />
+              <Route path="/project/:id" element={<Project />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      )}
     </div>
   );
 }

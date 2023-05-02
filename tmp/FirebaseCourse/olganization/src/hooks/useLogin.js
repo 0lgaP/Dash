@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useAuthContext } from "./useAuthContext";
-import { projectAuth } from "../firebase/config";
+import { projectAuth, projectFirestore } from "../firebase/config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 export const useLogin = () => {
@@ -14,8 +14,17 @@ export const useLogin = () => {
     setIsPending(true);
 
     try {
+      
       // login
       const res = await signInWithEmailAndPassword(projectAuth, email, password);
+      if (!res) {
+        throw new Error("Could not complete Login");
+      }
+
+      // update online state
+      await projectFirestore.collection("users").doc(res.user.uid).update({
+        online: true,
+      })
 
       // dispatch login action
       dispatch({ type: "LOGIN", payload: res.user });
