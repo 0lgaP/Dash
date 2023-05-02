@@ -24,16 +24,14 @@ const Register = () => {
 // form submit
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("handlingSubmit", isPending)
     register(email, password, displayName, thumbnail)
   }
 
-  console.log("in form", isPending)
   // images
   const handleFileChange = (e) => {
     setThumbnail(null);
     let selected = e.target.files[0];
-    console.log(selected);
+
 
     if (!selected) {
       setThumbnailError("Please select a file");
@@ -50,7 +48,7 @@ const Register = () => {
 
     setThumbnailError(null)
     setThumbnail(selected)
-    console.log("Thumbnail upadated")
+
   };
 
   return (

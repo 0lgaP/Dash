@@ -39,7 +39,12 @@ export const useSignup = () => {
         await updateProfile(res.user, { displayName, photoURL: imgUrl });
       }
 
-      // create user document
+      // create user document, instead of add() that adds new id, we use doc() pass in id of doc we want to create - this case user object's uid
+      // set() new document by adding the data
+
+      // we are creating a new document for every user that signs in
+      // that doc's id is the user id
+      // this connects document and user, identifies the doc as user's doc
       await projectFirestore.collection("users").doc(res.user.uid).set({
         online: true,
         displayName,
