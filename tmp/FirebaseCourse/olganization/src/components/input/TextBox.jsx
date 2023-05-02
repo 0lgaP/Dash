@@ -1,14 +1,13 @@
 import PropTypes from "prop-types";
-//styles
-import "./Input.css"
-const Input = ({ onChange, value, type, inputLabel, required }) => {
+// styles
+import "./TextBox.css";
 
+const TextBox = ({ inputLabel, onChange, value, required }) => {
   return (
     <label className="input-label">
-      <p>{inputLabel}</p>     
-      <input
+      <p>{inputLabel}</p>
+      <textarea
         className="input-container"
-        type={type}
         onChange={onChange}
         value={value}
         required={required}
@@ -16,16 +15,17 @@ const Input = ({ onChange, value, type, inputLabel, required }) => {
     </label>
   );
 };
-Input.propTypes = {
+TextBox.propTypes = {
   onChange: PropTypes.func.isRequired,
   value: PropTypes.any,
   type: PropTypes.string.isRequired,
   inputLabel: PropTypes.string.isRequired,
   error: PropTypes.string,
-  required: PropTypes.bool
+  required: PropTypes.bool,
 };
-Input.displayName = `"Input"`;
-Input.defaultProps = {
+TextBox.displayName = "TextBox";
+TextBox.defaultProps = {
   required: true,
-}
-export default Input;
+};
+
+export default TextBox;

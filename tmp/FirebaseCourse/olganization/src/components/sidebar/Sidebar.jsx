@@ -14,10 +14,10 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-content">
-          <div className="user">
-            <Avatar src={user.photoURL} />
-            <p>Hey {user.displayName}</p>
-          </div>
+        <div className="user">
+          <Avatar src={user.photoURL} />
+          <p>Hey {user.displayName}</p>
+        </div>
         <nav className="links">
           <ul>
             <li>

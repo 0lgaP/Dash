@@ -49,6 +49,7 @@ const PasswordInput = forwardRef((props, ref) => {
       <label>
         <p>Password</p>
         <input
+        className="pass-input"
           type={showPassword ? "text" : "password"}
           aria-required="true"
           autoComplete="new-password"

@@ -67,15 +67,20 @@ label span {
   display: block;
   margin-bottom: 6px;
 }
+label p {
+  display: block;
+  margin-bottom: 6px;
+}
 input, textarea {
   padding: 8px 6px;
   font-size: 1em;
   color: #777;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 4px;
 }
+
 textarea {
   min-height: 160px;
 }

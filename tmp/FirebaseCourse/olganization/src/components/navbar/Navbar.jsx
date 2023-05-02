@@ -7,9 +7,6 @@ import { useLogout } from "../../hooks/useLogout";
 import "./Navbar.css";
 // icon
 import Temple from "../../assets/temple.svg";
-// components
-import Avatar from "../avatar/Avatar";
-
 
 const Navbar = () => {
   const { logout, isPending } = useLogout();
@@ -23,15 +20,15 @@ const Navbar = () => {
             <span>Dash</span>
           </Link>
         </li>
-        {user && (
-          <li >
-            {user.displayName}
-          </li>
-        )}
+
         {!user && (
           <>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/register">Register</Link></li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/register">Register</Link>
+            </li>
           </>
         )}
         <li>

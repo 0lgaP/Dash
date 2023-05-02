@@ -13,6 +13,10 @@ import Create from "./pages/create/Create";
 import Project from "./pages/project/Project";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
+import OnlineUsers from "./components/sidebar/OnlineUsers";
+
+//known issues
+// -nav and sidebar are not interacting well
 
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -20,18 +24,35 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          {user && <Sidebar />}
+    {user && <Sidebar />}      
           <div className="container">
             <Navbar />
             <Routes>
-              <Route exact path="/" element={user ? <Dashboard /> : <Navigate to="/login"/>} />
-              <Route path="/create" element={user ? <Create /> : <Navigate to="/login"/>} />
-              <Route path="/project/:id" element={user ? <Project /> :<Navigate to="/login"/>} />
-              <Route path="/login" element={!user ? <Login /> : <Navigate to="/"/>} />
-              <Route path="/register" element={!user ? <Register /> : <Navigate to="/"/>} />
+              <Route
+                exact
+                path="/"
+                element={user ? <Dashboard /> : <Navigate to="/login" />}
+              />
+              <Route
+                path="/create"
+                element={user ? <Create /> : <Navigate to="/login" />}
+              />
+              <Route
+                path="/project/:id"
+                element={user ? <Project /> : <Navigate to="/login" />}
+              />
+              <Route
+                path="/login"
+                element={!user ? <Login /> : <Navigate to="/" />}
+              />
+              <Route
+                path="/register"
+                element={!user ? <Register /> : <Navigate to="/" />}
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
+          {user && <OnlineUsers />}
         </BrowserRouter>
       )}
     </div>
