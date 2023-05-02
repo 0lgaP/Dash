@@ -46,7 +46,7 @@ const PasswordInput = forwardRef((props, ref) => {
           className={showPassword ? "show-icon" : "hide-icon"}
         />
       </button>
-      <label>
+      <label className="pass-label">
         <p>Password</p>
         <input
         className="pass-input"
@@ -56,7 +56,6 @@ const PasswordInput = forwardRef((props, ref) => {
           ref={ref}
           value={password}
           onChange={onChange}
-          className="pass"
         />
       </label>
     </div>
