@@ -31,7 +31,6 @@ export const useFirestore = (collection) => {
 
   // collection ref
   const ref = projectFirestore.collection(collection)
-console.log("what ref look like:", ref)
 
 // only dispatch if not cancelled
 const dispatchIfNotCancelled = (action) => {

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 // hooks
 import { useCollection } from "../../hooks/useCollection";
 import { timestamp } from "../../firebase/config";
 import { useAuthContext } from "../../hooks/useAuthContext";
-import {useFirestore} from "../../hooks/useFirestore"
+import { useFirestore } from "../../hooks/useFirestore";
 // styles
 import "./Create.css";
 // components
@@ -13,18 +14,22 @@ import TextBox from "../../components/input/TextBox";
 import SelectInput from "../../components/input/SelectInput";
 
 const Create = () => {
+  // hooks
+  const { addDocument, response } = useFirestore("projects");
+  const [users, setUsers] = useState([]);
+  const { doc } = useCollection("users");
+  const { user } = useAuthContext();
+  const navigate = useNavigate();
+
+  // form field vals
   const [name, setName] = useState("");
   const [details, setDetails] = useState("");
   const [dueDate, setDueDate] = useState("");
   const [category, setCategory] = useState({});
-  const [users, setUsers] = useState([]);
   const [assignedUsers, setAssignedUsers] = useState([]);
   const [formError, setFormError] = useState(null);
 
-  // get user
-  const {user} = useAuthContext()
-  console.log({user})
-  const handleSumbit = (e) => {
+  const handleSumbit = async (e) => {
     e.preventDefault();
     setFormError(null);
     // checks
@@ -33,25 +38,29 @@ const Create = () => {
       setFormError("Category is required");
       return;
     }
-    // Assigneduser
+    // assigned user
     if (assignedUsers.length < 1) {
       setFormError("Please assign project to at least one user");
       return;
     }
-// creator/user information
+    // creator/user information
     const createdBy = {
       displayName: user.displayName,
       photoURL: user.photoURL,
-      id: user.uid
-    }
+      id: user.uid,
+    };
     // assigned users list
-    const assignedUsersList = assignedUsers && assignedUsers.map((u) => {
-      return {
-        displayName: u.value.displayName,
-        photoUrl: u.value.photoURL,
-        id: u.value.id
-      }
-    })
+    const assignedUsersList =
+      assignedUsers &&
+      assignedUsers.map((u) => {
+        return {
+          displayName: u.value.displayName,
+          photoUrl: u.value.photoURL,
+          id: u.value.id,
+        };
+      });
+
+    // document for firestore
     const project = {
       name,
       details,
@@ -59,13 +68,16 @@ const Create = () => {
       dueDate: timestamp.fromDate(new Date(dueDate)),
       comments: [],
       createdBy,
-      assignedUsersList
+      assignedUsersList,
     };
 
-    console.log(project);
+    // async submition
+    await addDocument(project);
+    if (!response.error) {
+      navigate("/");
+    }
   };
 
-  const { doc } = useCollection("users");
   //my useEffect
   useEffect(() => {
     if (users.length === 0) {
