@@ -1,51 +1,120 @@
-import { useState } from "react"
+import { useEffect, useState } from "react";
+// hooks
+import { useCollection } from "../../hooks/useCollection";
+import { timestamp } from "../../firebase/config";
+import { useAuthContext } from "../../hooks/useAuthContext";
+import {useFirestore} from "../../hooks/useFirestore"
 // styles
-import "./Create.css"
+import "./Create.css";
 // components
-import FormCard from "../../components/Cards/FormCard"
-import Input from "../../components/input/Input"
-import TextBox from "../../components/input/TextBox"
+import FormCard from "../../components/Cards/FormCard";
+import Input from "../../components/input/Input";
+import TextBox from "../../components/input/TextBox";
+import SelectInput from "../../components/input/SelectInput";
 
 const Create = () => {
-const [name, setName] = useState("")
-const [details, setDetails] = useState("")
-const [dueDate, setDueDate] = useState("")
-const [category, setCategory] = useState("")
-const [assignedUsers, setAssignedUsers] = useState([])
+  const [name, setName] = useState("");
+  const [details, setDetails] = useState("");
+  const [dueDate, setDueDate] = useState("");
+  const [category, setCategory] = useState({});
+  const [users, setUsers] = useState([]);
+  const [assignedUsers, setAssignedUsers] = useState([]);
+  const [formError, setFormError] = useState(null);
 
+  // get user
+  const {user} = useAuthContext()
+  console.log({user})
   const handleSumbit = (e) => {
-    e.preventDefault()
-    console.log({name, details, dueDate})
-  }
+    e.preventDefault();
+    setFormError(null);
+    // checks
+    // category
+    if (!category) {
+      setFormError("Category is required");
+      return;
+    }
+    // Assigneduser
+    if (assignedUsers.length < 1) {
+      setFormError("Please assign project to at least one user");
+      return;
+    }
+// creator/user information
+    const createdBy = {
+      displayName: user.displayName,
+      photoURL: user.photoURL,
+      id: user.uid
+    }
+    // assigned users list
+    const assignedUsersList = assignedUsers && assignedUsers.map((u) => {
+      return {
+        displayName: u.value.displayName,
+        photoUrl: u.value.photoURL,
+        id: u.value.id
+      }
+    })
+    const project = {
+      name,
+      details,
+      category: category.value,
+      dueDate: timestamp.fromDate(new Date(dueDate)),
+      comments: [],
+      createdBy,
+      assignedUsersList
+    };
+
+    console.log(project);
+  };
+
+  const { doc } = useCollection("users");
+  //my useEffect
+  useEffect(() => {
+    if (users.length === 0) {
+      doc &&
+        doc.map((user) => {
+          setUsers((prev) => [
+            ...prev,
+            { label: user.displayName, value: user },
+          ]);
+        });
+    }
+    [doc];
+  });
+
   return (
-    <FormCard onSubmit={handleSumbit} title="Create a new project" buttonLabel="Add Project">
-<Input
- onChange={(e) => setName(e.target.value)}
- value={name}
- type="text"
- inputLabel="Project name"
-/>
-<TextBox 
-onChange={(e) => setDetails(e.target.value)}
-value={details}
-type="text"
-inputLabel="Project Details"
-/>
-<Input 
-onChange={(e) => setDueDate(e.target.value)}
-value={dueDate}
-type="date"
-inputLabel="Due Date"
-/>
-{/* pull out into own component after we finish this */}
-<label><span>Project category</span></label>
-<label><span>Assign to</span></label>
+    <FormCard
+      onSubmit={handleSumbit}
+      title="Create a new project"
+      buttonLabel="Add Project"
+    >
+      <Input
+        onChange={(e) => setName(e.target.value)}
+        value={name}
+        type="text"
+        inputLabel="Project name"
+      />
+      <TextBox
+        onChange={(e) => setDetails(e.target.value)}
+        value={details}
+        type="text"
+        inputLabel="Project Details"
+      />
+      <Input
+        onChange={(e) => setDueDate(e.target.value)}
+        value={dueDate}
+        type="date"
+        inputLabel="Due Date"
+      />
 
-
-{/* pull out into own component after we finish this */}
-
+      <SelectInput onChange={(option) => setCategory(option)} />
+      <SelectInput
+        label={"Assign to"}
+        onChange={(option) => setAssignedUsers(option)}
+        options={users}
+        isMulti={true}
+      />
+      {formError && <div className="error">{formError}</div>}
     </FormCard>
-  )
-}
+  );
+};
 
-export default Create
+export default Create;

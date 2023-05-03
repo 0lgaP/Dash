@@ -1,9 +1,8 @@
 import { AuthContext } from "../context/AuthContext";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 export const useAuthContext = () => {
   const context = useContext(AuthContext);
-  useEffect(() =>   (console.log("From useAuthCOntext", context)), [context])
 
   if (!context) {
     // check that context is in scope
