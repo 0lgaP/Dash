@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import PropTypes from "prop-types";
+
 //components
 import Avatar from "../avatar/Avatar"
 //styles
@@ -25,6 +27,10 @@ const List = ({projects}) => {
       ))}
     </div>
   )
+}
+List.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.string)
+  
 }
 
 export default List
