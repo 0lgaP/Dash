@@ -1,12 +1,14 @@
 import PropTypes from "prop-types";
+// styles
+import "./FormCard.css"
 
 // components
 import Button from "../input/Button";
 
-const FormCard = ({ children, onSubmit, title, buttonLabel, isPending }) => {
+const FormCard = ({ children, onSubmit, title, buttonLabel, isPending , addClass}) => {
   return (
     <>
-    <form className="auth-form" onSubmit={onSubmit}>
+    <form className={`auth-form ${addClass}`} onSubmit={onSubmit}>
       <h2>{title}</h2>
       {children}
       <Button label={buttonLabel} type="submit" disabled={isPending}/>
@@ -22,11 +24,13 @@ FormCard.propTypes = {
   title: PropTypes.string.isRequired,
   buttonLabel: PropTypes.string,
   error: PropTypes.any,
-  isPending: PropTypes.bool
+  isPending: PropTypes.bool,
+  addClass: PropTypes.string
 };
 
 FormCard.defaultProps = {
   buttonLabel: "Submit",
+  addClass: ""
 };
 FormCard.displayName = "Input";
 

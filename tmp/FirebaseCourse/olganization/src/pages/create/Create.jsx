@@ -15,10 +15,10 @@ const [assignedUsers, setAssignedUsers] = useState([])
 
   const handleSumbit = (e) => {
     e.preventDefault()
-    console.log("log")
+    console.log({name, details, dueDate})
   }
   return (
-    <FormCard onSubmit={handleSumbit} title="Create a new project">
+    <FormCard onSubmit={handleSumbit} title="Create a new project" buttonLabel="Add Project">
 <Input
  onChange={(e) => setName(e.target.value)}
  value={name}
@@ -31,6 +31,18 @@ value={details}
 type="text"
 inputLabel="Project Details"
 />
+<Input 
+onChange={(e) => setDueDate(e.target.value)}
+value={dueDate}
+type="date"
+inputLabel="Due Date"
+/>
+{/* pull out into own component after we finish this */}
+<label><span>Project category</span></label>
+<label><span>Assign to</span></label>
+
+
+{/* pull out into own component after we finish this */}
 
     </FormCard>
   )
