@@ -7,9 +7,9 @@ import Avatar from "../avatar/Avatar"
 import "./List.css"
 const List = ({projects}) => {
   return (
-        <div className="project-list">
+      <div className="project-list" >
       {projects.length === 0 && <p>No projects yet!</p>}
-      {projects.map(project => (
+      {projects.map((project) => (
         <Link to={`/projects/${project.id}`} key={project.id}>
           <h4>{project.name}</h4>
           <p>Due by {project.dueDate.toDate().toDateString()}</p>
@@ -17,7 +17,7 @@ const List = ({projects}) => {
             <p><strong>Assigned to:</strong></p>
             <ul>
               {project.assignedUsersList.map(user => (
-                <li key={user.photoURL}>
+                <li key={user.photoUrl}>
                   <Avatar src={user.photoUrl} />
                 </li>
               ))}
@@ -29,7 +29,7 @@ const List = ({projects}) => {
   )
 }
 List.propTypes = {
-  projects: PropTypes.arrayOf(PropTypes.string)
+  projects: PropTypes.arrayOf(PropTypes.object)
   
 }
 

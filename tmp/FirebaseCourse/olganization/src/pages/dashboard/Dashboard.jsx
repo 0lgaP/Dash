@@ -6,6 +6,7 @@ import List from "../../components/list/List";
 
 const Dashboard = () => {
   const { doc, error } = useCollection("projects");
+  console.log("dash",doc)
   return (
     <div>
       <h2 className="page-title">Dashboard</h2>
