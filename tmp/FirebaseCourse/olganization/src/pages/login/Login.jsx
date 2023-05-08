@@ -1,8 +1,7 @@
 import { useState, useRef } from "react";
 // hooks
 import { useLogin } from "../../hooks/useLogin";
-// styles
-import "./Login.css";
+
 // components
 import Input from "../../components/input/Input";
 import PasswordInput from "../../components/input/PasswordInput";
@@ -15,10 +14,10 @@ const Login = () => {
   const { login, error, isPending } = useLogin();
   const passRef = useRef(null);
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    login(email, password)
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    login(email, password);
+  };
   return (
     <FormCard
       onSubmit={handleSubmit}
@@ -45,3 +44,5 @@ const Login = () => {
 };
 
 export default Login;
+
+

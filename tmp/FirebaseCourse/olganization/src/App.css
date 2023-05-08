@@ -5,14 +5,18 @@
   flex-grow: 1;
 }
 
-.App .container > div {
-
+.display {
+  padding-left: 20px;
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
-
 }
 
-.display {
-  padding-left: 20px;
+.authenticate {
+  display:flex;
+  justify-content: center;
 }
+  /* justify-content: center;
+  align-items: center;
+  width: 100%;
+} */
