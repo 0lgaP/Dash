@@ -1,11 +1,14 @@
 .user-list {
   width: 250px;
   min-width: 250px;
-  padding: 30px;
+  height:fit-content;
+  padding: 20px;
   box-sizing: border-box;
-  background: #fbfbfb;
+  background: var(--primary-color);
   color: var(--heading-color);
   justify-self: end;
+  border-radius: 20px 0 0 20px;
+  position:fixed;
 }
 .user-list h2 {
   text-align: right;
@@ -19,6 +22,7 @@
   justify-content: flex-end;
   align-items: center;
   margin: 10px auto;
+  height: 20px;
 }
 .user-list .avatar {
   margin-left: 10px;
@@ -41,3 +45,31 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+
+/* toggle styles */
+
+.user-list.collapsed {
+  width: 90px;
+  min-width: 50px;
+  box-sizing: border-box;
+  padding-left: 0;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.toggle-container > h2 {
+  margin: 0 0 0 10px;
+  padding: 0;
+  border: none;
+}
+.btn-toggle{
+  color: #fff;
+  background-color: transparent;
+  border:none;
+  font-size: x-large;
+}
+
