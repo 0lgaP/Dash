@@ -3,5 +3,16 @@
 }
 .App .container{
   flex-grow: 1;
-  padding: 0 60px;
+}
+
+.App .container > div {
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+
+}
+
+.display {
+  padding-left: 20px;
 }

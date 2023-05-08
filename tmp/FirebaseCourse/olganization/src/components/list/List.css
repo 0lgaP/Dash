@@ -11,6 +11,7 @@
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
   text-decoration: none;
   color: inherit;
+  max-width: 300px;
 }
 .project-list h4 {
   font-size: 0.9em;
