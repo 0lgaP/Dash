@@ -57,6 +57,9 @@ ul {
   color: #fff;
   background-color: var(--primary-color);
 }
+.btn.delete {
+  margin-left:30px;
+}
 
 /* forms */
 label {
@@ -91,4 +94,13 @@ textarea {
   border-radius: 4px;
   padding: 8px;
   margin: 10px 0;
+}
+
+/* permanent and hidden scrollbar */
+html {
+  overflow: -moz-scrollbars-vertical; 
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar{
+  display: none;
 }
