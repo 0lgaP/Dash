@@ -5,6 +5,8 @@ import useDocuments from "../../hooks/useDocuments";
 import "./Project.css";
 // components
 import ProjectSummary from "./ProjectSummary";
+import ProjectComments from "./ProjectComments";
+
 
 const Project = () => {
   // id was set in our route as  ":id" so to extract the param we destructure the id from the url
@@ -25,6 +27,7 @@ const Project = () => {
   return (
     <div className="project-details">
       <ProjectSummary project={document}/>
+<ProjectComments />
     </div>
   );
 };
