@@ -15,7 +15,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="sidebar-content">
         <div className="user">
-          <Avatar src={user.photoURL} />
+          <Avatar src={user.photoURL} name={user.displayName}/>
           <p>Hey {user.displayName}</p>
         </div>
         <nav className="links">

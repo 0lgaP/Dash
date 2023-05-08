@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import useDocuments from "../../hooks/useDocuments";
 // styles
 import "./Project.css";
+// components
+import ProjectSummary from "./ProjectSummary";
 
 const Project = () => {
   // id was set in our route as  ":id" so to extract the param we destructure the id from the url
@@ -22,7 +24,7 @@ const Project = () => {
 
   return (
     <div className="project-details">
-      <h1>{document.name}</h1>
+      <ProjectSummary project={document}/>
     </div>
   );
 };

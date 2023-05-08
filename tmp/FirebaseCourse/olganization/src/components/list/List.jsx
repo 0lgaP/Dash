@@ -18,7 +18,7 @@ const List = ({projects}) => {
             <ul>
               {project.assignedUsersList.map(user => (
                 <li key={user.photoUrl}>
-                  <Avatar src={user.photoUrl} />
+                  <Avatar src={user.photoUrl} name={user.displayName}/>
                 </li>
               ))}
             </ul>

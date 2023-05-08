@@ -14,7 +14,7 @@ const OnlineUsers = () => {
           {user.online && <span className="online-user"></span>}
           </div>
           <span>{user.displayName}</span>
-          <Avatar src={user.photoURL} />
+          <Avatar src={user.photoURL} name={user.displayName}/>
         </div>
       ))}
     </div>
