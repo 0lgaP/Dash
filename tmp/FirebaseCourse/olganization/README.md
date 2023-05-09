@@ -1,6 +1,6 @@
 # About Dash
 
-![Dash Project Link](https://github.com/0lgaP/olganization/blob/main/dash.png?raw=true)
+![Dash Project Link](https://github.com/0lgaP/good-merning/blob/main/FirebaseCourse/olganization/src/assets/dash.png?raw=true)
 
 This project is built using Vitejs & Firebase. It uses the date-fns library, react router 6 and react-select. 
 
