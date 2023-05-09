@@ -6,6 +6,7 @@ import "./Project.css";
 // components
 import ProjectSummary from "./ProjectSummary";
 import ProjectComments from "./ProjectComments";
+import DashCard from "../../components/Cards/DashCard";
 
 
 const Project = () => {
@@ -25,10 +26,12 @@ const Project = () => {
   }
 
   return (
+    <DashCard>
     <div className="project-details">
       <ProjectSummary project={document}/>
 <ProjectComments project={document}/>
     </div>
+    </DashCard>
   );
 };
 
