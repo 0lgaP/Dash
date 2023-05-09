@@ -3,6 +3,7 @@
   padding: 20px 20px;
   box-sizing: border-box;
   margin-bottom: 30px;
+  background-color: var(--primary-color);
 }
 .navbar ul {
   display: flex;

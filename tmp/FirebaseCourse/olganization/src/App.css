@@ -1,10 +1,15 @@
 .App {
   display: flex;
+  width: 100vw;
+  
 }
 .App .container{
-  flex-grow: 1;
   padding: 20px;
 }
+.App .layout {
+  flex-grow: 1;
+}
+
 
 /* .display {
   padding-left: 20px;

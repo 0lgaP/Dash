@@ -26,8 +26,10 @@ function App() {
       {authIsReady && (
         <BrowserRouter>
           {user && <Sidebar />}
-          <div className="container">
+
+<div className="layout" >
             <Navbar />
+            <div className="container">
               <Routes>
                 <Route
                   exact
@@ -52,6 +54,8 @@ function App() {
                 />
                 <Route path="*" element={<NotFound />} />
               </Routes>
+            </div>
+    
             </div>
 
               {user && <OnlineUsers />}
