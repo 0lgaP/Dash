@@ -1,5 +1,6 @@
 # About Dash
 
+![Dash Project Link](https://github.com/0lgaP/olganization/blob/main/dash.png?raw=true)
 
 This project is built using Vitejs & Firebase. It uses the date-fns library, react router 6 and react-select. 
 
@@ -13,6 +14,7 @@ This project is live and can be viewed [Here](https://dash-1fdb7.web.app/login)
 ## Features
 
 * Project Filter
+* Image upload
 * Online Status
 * Authentication
 * Commenting
@@ -21,9 +23,16 @@ This project is live and can be viewed [Here](https://dash-1fdb7.web.app/login)
 
 ## Gettign Started
 
-clone or download project
+1. Clone or download project repo and install dependancies by running
+```
+npm i
+```
 
-run ```npm i```
+2. Start dev server
+```
+npm run dev
+```
+
 
 
 >Vite Deployment Notes:
