@@ -100,6 +100,7 @@ textarea {
 html {
   overflow: -moz-scrollbars-vertical; 
   overflow-y: scroll;
+  background-color: var(--primary-color);
 }
 body::-webkit-scrollbar{
   display: none;
