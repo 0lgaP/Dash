@@ -20,7 +20,7 @@ import OnlineUsers from "./components/sidebar/OnlineUsers";
 
 function App() {
   const { user, authIsReady } = useAuthContext();
-  const containerClass = user ? "display": "authenticate";
+
   return (
     <div className="App">
       {authIsReady && (
@@ -28,7 +28,6 @@ function App() {
           {user && <Sidebar />}
           <div className="container">
             <Navbar />
-            <div className={containerClass}>
               <Routes>
                 <Route
                   exact
@@ -53,9 +52,9 @@ function App() {
                 />
                 <Route path="*" element={<NotFound />} />
               </Routes>
-              {user && <OnlineUsers />}
             </div>
-          </div>
+
+              {user && <OnlineUsers />}
         </BrowserRouter>
       )}
     </div>

@@ -3,14 +3,15 @@
 }
 .App .container{
   flex-grow: 1;
+  padding: 20px;
 }
 
-.display {
+/* .display {
   padding-left: 20px;
   display: grid;
   grid-template-columns: 75% 25%;
   gap: 10px;
-}
+} */
 
 .authenticate {
   display:flex;

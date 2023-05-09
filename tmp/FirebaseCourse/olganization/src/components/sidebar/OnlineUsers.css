@@ -1,20 +1,11 @@
 .user-list {
-  width: 250px;
-  min-width: 250px;
-  height:fit-content;
+  max-width: 200px;
   padding: 20px;
   box-sizing: border-box;
   background: var(--primary-color);
   color: var(--heading-color);
-  justify-self: end;
-  border-radius: 20px 0 0 20px;
-  /* position:fixed; */
 }
 .user-list h2 {
-  text-align: right;
-  margin-bottom: 40px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
   font-size: 1.2em;
 }
 .user-list .user-list-item {
@@ -23,6 +14,7 @@
   align-items: center;
   margin: 10px auto;
   height: 20px;
+
 }
 .user-list .avatar {
   margin-left: 10px;
@@ -31,7 +23,7 @@
 }
 
 /* online users */
-.user-list .online-user {
+.user-list .online-user, .offline-user {
   display: inline-block;
   margin-right: 10px;
   width: 12px;
@@ -40,6 +32,11 @@
   border-radius: 50%;
   margin-top: 2px;
 }
+
+.offline-user {
+  background: transparent;
+}
+
 .user-list-item span {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -50,26 +47,28 @@
 /* toggle styles */
 
 .user-list.collapsed {
-  width: 90px;
-  min-width: 50px;
+  width: 80px;
+  min-width:fit-content;
   box-sizing: border-box;
-  padding-left: 0;
+  padding: 20px 10px 0 0;
+
 }
 
-.toggle-container {
+.user-list.collapsed .user-list-item {
+justify-content: center;
+}
+
+
+.title-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  height: 20px;
+  margin-top: 40px;
 }
-.toggle-container > h2 {
+.title-container > h2 {
   margin: 0 0 0 10px;
   padding: 0;
   border: none;
-}
-.btn-toggle{
-  color: #fff;
-  background-color: transparent;
-  border:none;
-  font-size: x-large;
 }
 
