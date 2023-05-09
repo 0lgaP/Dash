@@ -7,7 +7,7 @@ import "./Dashboard.css";
 // components
 import List from "../../components/list/List";
 import ProjectFilter from "./ProjectFilter";
-
+import DashCard from "../../components/Cards/DashCard";
 // hardcoded vals
 const filtersList = [
   "all",
@@ -49,8 +49,9 @@ const Dashboard = () => {
     });
 
   return (
-    <div>
-      <h2 className="page-title">Dashboard</h2>
+    <DashCard>
+      <div className="dash-padding">
+      <h2>Dashboard</h2>
       {error && <p className="error">{error}</p>}
       {doc && (
         <ProjectFilter
@@ -60,7 +61,8 @@ const Dashboard = () => {
         />
       )}
       {filteredList && <List projects={filteredList} />}
-    </div>
+      </div>
+    </DashCard>
   );
 };
 

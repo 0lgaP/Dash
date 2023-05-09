@@ -46,7 +46,7 @@
   filter: invert(40%);
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .sidebar {
     width: 200px;
     min-width: 200px;

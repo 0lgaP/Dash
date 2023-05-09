@@ -8,6 +8,7 @@ import "./Navbar.css";
 // icon
 import Temple from "../../assets/temple.svg";
 
+
 const Navbar = () => {
   const { logout, isPending } = useLogout();
   const { user } = useAuthContext();

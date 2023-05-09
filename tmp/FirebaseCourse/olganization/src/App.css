@@ -3,11 +3,14 @@
   width: 100vw;
   
 }
-.App .container{
+/* .App .container{
   padding: 20px;
-}
+} */
 .App .layout {
   flex-grow: 1;
+
+  background-color: var(--primary-color);
+
 }
 
 

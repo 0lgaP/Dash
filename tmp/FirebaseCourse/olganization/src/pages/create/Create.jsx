@@ -12,6 +12,7 @@ import FormCard from "../../components/Cards/FormCard";
 import Input from "../../components/input/Input";
 import TextBox from "../../components/input/TextBox";
 import SelectInput from "../../components/input/SelectInput";
+import DashCard from "../../components/Cards/DashCard";
 
 const Create = () => {
   // hooks
@@ -93,6 +94,7 @@ const Create = () => {
   });
 
   return (
+    <DashCard>
     <FormCard
       onSubmit={handleSumbit}
       title="Create a new project"
@@ -126,6 +128,7 @@ const Create = () => {
       />
       {formError && <div className="error">{formError}</div>}
     </FormCard>
+    </DashCard>
   );
 };
 

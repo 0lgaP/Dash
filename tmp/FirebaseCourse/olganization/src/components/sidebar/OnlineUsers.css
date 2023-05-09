@@ -6,6 +6,7 @@
   color: var(--heading-color);
 }
 .user-list h2 {
+  color: var(--bg-color);
   font-size: 1.2em;
 }
 .user-list .user-list-item {
@@ -41,6 +42,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: var(--bg-color)
 }
 
 
