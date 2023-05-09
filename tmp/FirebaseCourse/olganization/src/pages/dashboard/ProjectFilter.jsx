@@ -1,19 +1,13 @@
-import { useState } from "react";
-const filtersList = ["all", "mine", "development", "design", "marketing", "sales"];
 
-const ProjectFilter = () => {
-  const [currentFilter, setCurrentFilter] = useState("all");
-  const handleClick = (newFilter) => {
-    console.log(newFilter);
-    setCurrentFilter(newFilter);
-  };
+const ProjectFilter = ({onClick, filtersList, currentFilter}) => {
+
   return (
     <div className="project-filter">
       <nav>
         {filtersList.map((f) => (
           <button key={f} 
           className={currentFilter === f ? 'active': ''}
-          onClick={() => handleClick(f)}>
+          onClick={() => onClick(f)}>
             {f}
           </button>
         ))}
