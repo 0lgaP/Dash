@@ -5,13 +5,13 @@ import "./OnlineUsers.css";
 
 const OnlineUsers = () => {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 1024);
-  const [isSmall, setSmall] = useState(window.innerWidth > 640 && window.innerWidth < 1023.9);
+  const [isSmall, setSmall] = useState(window.innerWidth > 825 && window.innerWidth < 1023.9);
 
   const { doc, error } = useCollection("users");
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 1024);
-    setSmall(window.innerWidth > 640);
+    setSmall(window.innerWidth > 825);
   };
 
   useEffect(() => {
@@ -20,9 +20,6 @@ const OnlineUsers = () => {
       window.removeEventListener("resize", updateMedia);
     };
   });
-
-
-
 
   return (
     <div className="user-list">

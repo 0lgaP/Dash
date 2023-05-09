@@ -2,7 +2,7 @@
   width: 200px;
   min-width: 200px;
   background: var(--primary-color);
-  min-height: 100vh;
+  height: 100;
   box-sizing: border-box;
   position: relative;
   color: #fff;
@@ -46,3 +46,22 @@
   filter: invert(40%);
 }
 
+@media screen and (max-width: 825px) {
+  .sidebar {
+    width: 200px;
+    min-width: 200px;
+    background: var(--primary-color);
+    height: 100;
+    box-sizing: border-box;
+    position: relative;
+    color: #fff;
+  }
+  .sidebar .links a {
+    display: flex;
+    padding: 10px;
+    text-decoration: none;
+    width: 100%;
+    color: #fff;
+    box-sizing: border-box;
+  }
+}
