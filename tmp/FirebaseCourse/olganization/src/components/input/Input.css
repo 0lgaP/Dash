@@ -1,5 +1,4 @@
 
-
 .input-container:focus {
   outline-color:var(--primary-color);
   border: 2px solid transparent;
@@ -7,4 +6,8 @@
 
 .input-label:focus-within p {
   color: var(--primary-color);
+}
+
+.input-container{
+  max-width: 360px;
 }
