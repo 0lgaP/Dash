@@ -8,7 +8,7 @@
   color: var(--heading-color);
   justify-self: end;
   border-radius: 20px 0 0 20px;
-  position:fixed;
+  /* position:fixed; */
 }
 .user-list h2 {
   text-align: right;
