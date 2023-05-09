@@ -1,27 +1,12 @@
 .App {
   display: flex;
   width: 100vw;
-  
 }
-/* .App .container{
-  padding: 20px;
-} */
 .App .layout {
   flex-grow: 1;
-
   background-color: var(--primary-color);
-
 }
-
-
-/* .display {
-  padding-left: 20px;
-  display: grid;
-  grid-template-columns: 75% 25%;
-  gap: 10px;
-} */
-
 .authenticate {
-  display:flex;
+  display: flex;
   justify-content: center;
 }

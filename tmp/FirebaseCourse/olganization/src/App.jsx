@@ -57,8 +57,8 @@ function App() {
             </div>
     
             </div>
-
               {user && <OnlineUsers />}
+
         </BrowserRouter>
       )}
     </div>
