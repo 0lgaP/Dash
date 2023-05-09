@@ -32,8 +32,9 @@ const Navbar = () => {
             </li>
           </>
         )}
+
         <li>
-          {!isPending && (
+          {!isPending && user && (
             <button className="btn" onClick={logout}>
               Logout
             </button>
