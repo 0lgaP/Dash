@@ -5,13 +5,13 @@ import { useFirestore } from "../../hooks/useFirestore";
 import Avatar from "../../components/avatar/Avatar";
 // timer
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
+//components
+import TextBox from "../../components/input/TextBox";
 
-
-const ProjectComments = ({project}) => {
-  const {updateDocument, response} = useFirestore('projects')
+const ProjectComments = ({ project }) => {
+  const { updateDocument, response } = useFirestore("projects");
   const [newComment, setNewComment] = useState("");
   const { user } = useAuthContext();
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,35 +24,41 @@ const ProjectComments = ({project}) => {
       id: Math.random(),
     };
     console.log(commentToAdd);
-    await updateDocument(project.id, {comments: [...project.comments, commentToAdd]})
-    if(!response.error) {
-      setNewComment("")
+    await updateDocument(project.id, {
+      comments: [...project.comments, commentToAdd],
+    });
+    if (!response.error) {
+      setNewComment("");
     }
   };
   return (
     <div className="project-comments">
       <h4>Project Comments</h4>
       <ul>
-        {project.comments.length > 0 && project.comments.map(comment => (
-          <li key={comment.id}>
-<div className="comment-author">
-  <Avatar src={comment.photoURL} name={comment.displayName} />
-  <p>{comment.displayName}</p>
-</div>
-<div className="comment-date"><p>{formatDistanceToNow(comment.createdAt.toDate(), {addSuffix: true})}</p></div>
-<div className="comment-content">{comment.content}</div>
-          </li>
-        ))}
+        {project.comments.length > 0 &&
+          project.comments.map((comment) => (
+            <li key={comment.id}>
+              <div className="comment-author">
+                <Avatar src={comment.photoURL} name={comment.displayName} />
+                <p>{comment.displayName}</p>
+              </div>
+              <div className="comment-date">
+                <p>
+                  {formatDistanceToNow(comment.createdAt.toDate(), {
+                    addSuffix: true,
+                  })}
+                </p>
+              </div>
+              <div className="comment-content">{comment.content}</div>
+            </li>
+          ))}
       </ul>
       <form className="add-comment" onSubmit={handleSubmit}>
-        <label>
-          <p>Add new comment</p>
-          <textarea
-            required
-            onChange={(e) => setNewComment(e.target.value)}
-            value={newComment}
-          ></textarea>
-        </label>
+        <TextBox
+          inputLabel="Add new comment"
+          onChange={(e) => setNewComment(e.target.value)}
+          value={newComment}
+        />
         <button className="btn" type="submit">
           Add Comment
         </button>
