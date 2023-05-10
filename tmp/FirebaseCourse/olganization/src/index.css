@@ -77,6 +77,7 @@ label p {
   margin-bottom: 6px;
 }
 input, textarea {
+  font-family: Arial, Helvetica, sans-serif;
   padding: 8px 6px;
   font-size: 1em;
   color: #777;
@@ -88,6 +89,12 @@ input, textarea {
 
 textarea {
   min-height: 160px;
+}
+/* select */
+
+.input-label > div {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
 }
 .error {
   color: red;

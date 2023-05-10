@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 // styles
 import "./TextBox.css";
 
-const TextBox = ({ inputLabel, onChange, value, required }) => {
+const TextBox = ({ inputLabel, onChange, value, required}) => {
   return (
     <label className="input-label">
       <p>{inputLabel}</p>
@@ -11,6 +11,7 @@ const TextBox = ({ inputLabel, onChange, value, required }) => {
         onChange={onChange}
         value={value}
         required={required}
+        spellCheck="true"
       />
     </label>
   );
@@ -26,6 +27,7 @@ TextBox.propTypes = {
 TextBox.displayName = "TextBox";
 TextBox.defaultProps = {
   required: true,
+  spellCheck: true,
 };
 
 export default TextBox;

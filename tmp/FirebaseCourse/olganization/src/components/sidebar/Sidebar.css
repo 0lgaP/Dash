@@ -12,6 +12,7 @@
   width: inherit;
 }
 .sidebar .user {
+  height: 80px;
   font-weight: bold;
   text-align: center;
   letter-spacing: 1px;
@@ -54,17 +55,12 @@
   .user > p {
     display:none;
   }
-  .sidebar .user {
-    display:flex;
-    border-bottom:none;
-    flex-direction:column;
-    align-items: flex-end;
-    margin-left:15px;
-    margin-top: -20px;
 
-  }
   .sidebar .links a > span{
     display: none;
+  }
+  .sidebar .user img {
+    display:none;
   }
 
   .user :first-child{
