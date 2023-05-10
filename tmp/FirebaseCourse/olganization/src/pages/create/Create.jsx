@@ -94,11 +94,12 @@ const Create = () => {
   });
 
   return (
-    <DashCard>
+    <DashCard addClass="create-form">
     <FormCard
       onSubmit={handleSumbit}
       title="Create a new project"
       buttonLabel="Add Project"
+      addClass="create-form"
     >
       <Input
         onChange={(e) => setName(e.target.value)}

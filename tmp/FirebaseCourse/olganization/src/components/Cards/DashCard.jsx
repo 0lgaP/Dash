@@ -1,8 +1,8 @@
 import "./FormCard.css"
 
-const DashCard = ({children}) => {
+const DashCard = ({children, addClass}) => {
   return (
-    <div className="dash-card">{children}</div>
+    <div className={`dash-card ${addClass}`}>{children}</div>
   )
 }
 
