@@ -19,6 +19,7 @@ const Login = () => {
     login(email, password);
   };
   return (
+    <div className="container-signin">
     <FormCard
       onSubmit={handleSubmit}
       title="Login"
@@ -40,6 +41,7 @@ const Login = () => {
 
       {error && <div className="error">{error}</div>}
     </FormCard>
+    </div>
   );
 };
 

@@ -15,6 +15,8 @@ body {
   margin: 0;
   font-size: 1.1em;
   background: var(--bg-color);
+  height: 100vh;
+  background-color: var(--primary-color);
 }
 ul, li, p, h1, h2, h3, h4 {
   margin: 0;
@@ -106,3 +108,6 @@ body::-webkit-scrollbar{
   display: none;
 }
 
+body > #root > div {
+  height: 100vh;
+}

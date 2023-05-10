@@ -1,9 +1,10 @@
-.auth-form {
-  width: 100%;
+form.auth-form {
+  width: 400px;
   box-shadow: 3px 3px 5px rgba(0,0,0,0.05);
   background-color: #fff;
   padding:30px;
   box-sizing: border-box;
+
 }
 .auth-form > h2 {
   color: var(--heading-color)
@@ -12,8 +13,14 @@
 
 .dash-card {
   background-color: var(--bg-color);
-  height: 100;
   padding: 20px;
   border-radius: 20px 20px 0 0;
   box-sizing: border-box;
+}
+
+
+.container-signin {
+display:flex;
+justify-content: center;
+padding-top: 20px;
 }

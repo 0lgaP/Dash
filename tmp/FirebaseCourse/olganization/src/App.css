@@ -1,12 +1,17 @@
 .App {
   display: flex;
-  width: 100vw;
+  height: 100%;
 }
 .App .layout {
   flex-grow: 1;
-  background-color: var(--primary-color);
 }
 .authenticate {
   display: flex;
   justify-content: center;
+}
+
+.container {
+  background-color: var(--bg-color);
+  height: 100%;
+  border-radius: 20px 20px 0 0;
 }
