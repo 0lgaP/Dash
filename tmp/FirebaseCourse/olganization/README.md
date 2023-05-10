@@ -4,7 +4,7 @@ This project is live and can be viewed by clicking the image below
 
 [![Dash Project Link](https://github.com/0lgaP/good-merning/blob/main/FirebaseCourse/olganization/src/assets/dash.png?raw=true)](https://dash-1fdb7.web.app/login)
 
-This project is built using Vitejs & Firebase. It uses the date-fns library, react router 6 and react-select. 
+This project is built using Vitejs & Firebase. It uses the date-fns library, react router 6 and react-select. It is based on [The Net Ninja's](https://github.com/iamshaunjp) awesome Firebase course
 
 
 
