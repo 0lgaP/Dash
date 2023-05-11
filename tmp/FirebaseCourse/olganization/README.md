@@ -1,4 +1,4 @@
-# About Dash
+# Dash
 
 This project is live and can be viewed by clicking the image below
 
