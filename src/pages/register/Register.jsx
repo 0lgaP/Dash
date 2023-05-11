@@ -48,6 +48,8 @@ const Register = () => {
   };
 
   return (
+    <div className="container-signin">
+
     <FormCard
       onSubmit={handleSubmit}
       title="Register"
@@ -76,6 +78,7 @@ const Register = () => {
 
       {error && <div className="error">{error}</div>}
     </FormCard>
+    </div>
   );
 };
 
