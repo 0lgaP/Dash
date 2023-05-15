@@ -14,6 +14,7 @@ import Project from "./pages/project/Project";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import OnlineUsers from "./components/sidebar/OnlineUsers";
+import { Loading } from "./components/Loader/Loading";
 
 //known issues
 // -nav and sidebar are not interacting well
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+
       {authIsReady && (
         <BrowserRouter>
           {user && <Sidebar />}

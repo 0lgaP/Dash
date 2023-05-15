@@ -6,6 +6,7 @@ import { useLogin } from "../../hooks/useLogin";
 import Input from "../../components/input/Input";
 import PasswordInput from "../../components/input/PasswordInput";
 import FormCard from "../../components/Cards/FormCard";
+import { Loading } from "../../components/Loader/Loading";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -40,6 +41,7 @@ const Login = () => {
       />
 
       {error && <div className="error">{error}</div>}
+      {!isPending && <Loading/>}
     </FormCard>
     </div>
   );
