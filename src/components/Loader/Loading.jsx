@@ -1,5 +1,5 @@
 import "./Loading.css"
-import Logo from "../../assets/dash.png"
+import Logo from "../../assets/Logo.svg"
 
 export const Loading = () => {
 
