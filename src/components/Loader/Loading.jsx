@@ -6,6 +6,7 @@ export const Loading = () => {
   return (
     <div className="modal-background">
     <img className="modal-img" src={Logo} alt="Loading"/>
+    <div className="modal-img-shadow"></div>
     </div>
   )
 }

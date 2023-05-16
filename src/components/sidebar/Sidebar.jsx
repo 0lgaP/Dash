@@ -4,8 +4,8 @@ import { useAuthContext } from "../../hooks/useAuthContext";
 // styles
 import "./Sidebar.css";
 // icons
-import DashboardIcon from "../../assets/dashboard_icon.svg";
-import AddIcon from "../../assets/add_icon.svg";
+import DashboardIcon from "../../assets/Logo.svg";
+import Plus from "../../assets/Plus.svg";
 // components
 import Avatar from "../avatar/Avatar";
 
@@ -28,7 +28,7 @@ const Sidebar = () => {
             </li>
             <li>
               <NavLink to="/create">
-                <img src={AddIcon} alt="add icon" />
+                <img src={Plus} alt="add icon" />
                 <span>New Project</span>
               </NavLink>
             </li>

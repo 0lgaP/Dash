@@ -1,16 +1,71 @@
-.modal-background{
+.modal-background {
   background-color: var(--primary-color);
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-content: center;
-  flex-wrap:wrap;
+  /* align-content: center; */
+  flex-wrap: wrap;
 }
 
-.modal-img{
-  
+.modal-img {
+  animation: float infinite 4s;
+  background-color: transparent;
+  position: absolute;
+  left: 49%;
+  width: 5%;
+  filter: invert(20%);
 }
+.modal-img-shadow {
+  animation: float2 infinite 4s;
+  width: 24px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  box-shadow: 0 2em 0.8em rgba(63, 76, 133, 0.856);
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-8px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translatey(-100px);
+    transform: scale(1.3, 0.4);
+  }
+  50% {
+    transform: translatey(-5px);
+  }
+  100% {
+    transform: translatey(-100px);
+    transform: scale(1.3, 0.4);
+  }
+}
+
+/* @keyframes shade {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+
+  }
+} */
